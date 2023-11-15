@@ -25,8 +25,8 @@ For the Frontend Mentor Advice generator app challenge, I created a Advice gener
 
 ### Links
 
-- Solution URL: [https://github.com/sudeep2003/age-calculator-app.git](https://github.com/sudeep2003/age-calculator-app.git)
-- Live Site URL: [https://sudeep2003.github.io/age-calculator-app/](https://sudeep2003.github.io/age-calculator-app/)
+- Solution URL: [https://github.com/sudeep2003/advice-generator-app.git](https://github.com/sudeep2003/advice-generator-app.git)
+- Live Site URL: [https://sudeep2003.github.io/advice-generator-app/](https://sudeep2003.github.io/advice-generator-app/)
 
 ### Built with
 
