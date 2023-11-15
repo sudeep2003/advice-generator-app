@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Advice generator app</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <p id="advice-id"></p>
+      <h3 id="advice"></h3>
+      <img src="/images/pattern-divider-desktop.svg" alt="pattern-divider-logo" class="line"/>
+      <button onclick="adviceLoad()" class="button"><img src="/images/icon-dice.svg" alt="button-logo"/></button>
+    </div>  
+  </div>
+  <footer class="acknowledge">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/sudeep2003">Sudeep Karmakar</a>.
+  </footer>
+  <script>
+    adviceLoad(); // fetch advice as soon as the script runs
+
+function adviceLoad() {
+    fetch('https://api.adviceslip.com/advice')
+        .then(response => response.json())
+        .then(data => {
+            let id = data['slip']['id'];
+            let advice = data['slip']['advice'];
+            document.getElementById('advice-id').innerHTML = "ADVICE #" + id;
+            document.getElementById('advice').innerHTML = '\"'+ advice +'\"';
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+}
+</script>
+</body>
+</html>
